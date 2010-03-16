@@ -46,11 +46,6 @@
 	  	(if (nil? tail) 
 	    	len
 	    	(recur tail (inc len))))))
-	    	
-def length (l: List) = l match {
-  case Nil => 0
-  case head : tail => 1 + length(tail)
-}
 
 (defn myreverse [l]
   (if (empty? l)
