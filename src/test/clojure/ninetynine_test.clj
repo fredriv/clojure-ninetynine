@@ -27,4 +27,9 @@
   (exec myreverse)
   (exec myreverse2))
 
+(deftest test-palindrome
+  (is (true? (palindrome? [1, 2, 3, 2, 1])))
+  (is (false? (palindrome? [1, 2, 3, 2])))
+  (is (true? (palindrome? [1]))))
+
 (run-tests)
