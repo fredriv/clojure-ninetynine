@@ -50,15 +50,13 @@
 (defn myreverse [l]
   (if (empty? l)
   	l
-		(loop [[head & tail] l
-		       res '()]
+		(loop [[head & tail] l res '()]
 	  	(if (nil? tail)
 	  		(cons head res)
 	  		(recur tail (cons head res))))))
 	  	
 (defn myreverse2 [l]
-  (loop [mylist l
-		     res '()]
+  (loop [mylist l res '()]
 	  	(if (empty? mylist)
 	  		res
 	  		(recur (rest mylist) (cons (first mylist) res)))))
